@@ -1,0 +1,6 @@
+@use '../libs' as *;
+
+body, #root{
+    background-color: gc(bg);
+    color: gc(fg);
+}

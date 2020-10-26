@@ -1,0 +1,24 @@
+@use 'sass:map';
+$color_palette: (
+    // Basic
+    fg: #1b1b1b,
+    bg: #fff,
+);
+
+$dark_color_palette: (
+    bg: #fff,
+    fg: rgb(54, 54, 54),
+);
+
+:root {
+    @each $name, $color in $color_palette {
+        --#{$name}: #{$color};
+    }
+}
+
+
+.dark {
+    @each $name, $color in $dark_color_palette {
+        --#{$name}: #{$color};
+    }
+}
