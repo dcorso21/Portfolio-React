@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
 :root {
   --fg: #1b1b1b;
   --bg: #fff;
@@ -19,6 +21,7 @@ tfoot, thead, tr, th, td, article, aside,
 canvas, details, embed, figure, figcaption,
 footer, header, hgroup, menu, nav, output, ruby,
 section, summary, time, mark, audio, video {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   border: 0;
@@ -74,7 +77,9 @@ input, select, textarea {
   appearance: none;
 }
 
-body, #root {
+body,
+#root {
   background-color: var(--bg);
   color: var(--fg);
+  font-family: "Source Sans Pro", sans-serif;
 }
