@@ -1,0 +1,27 @@
+:root {
+  --fg: #1b1b1b;
+  --bg: #fff;
+}
+
+.dark {
+  --bg: #fff;
+  --fg: #363636;
+}
+
+#portfolio {
+  padding: 5%;
+  background: linear-gradient(to left, white, rgba(255, 255, 255, 0.664)), url(../../../imgs/pexels-gdtography-911738.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#portfolio h1 {
+  font-size: 140%;
+  font-family: "Prata", serif;
+}
+#portfolio .tags .tag {
+  background-color: #b2de4c;
+  margin: 5px 10px;
+  padding: 3px 6px;
+  border-radius: 10px;
+}

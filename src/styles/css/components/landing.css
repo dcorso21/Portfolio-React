@@ -9,7 +9,10 @@
 }
 
 .landing-page {
-  height: 100vh;
+  background: linear-gradient(to left, white, rgba(255, 255, 255, 0.664)), url(../../../imgs/pexels-henry-&-co-1939485.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 .landing-page .lay {
   display: flex;
@@ -47,13 +50,28 @@
   justify-content: space-evenly;
 }
 .landing-page .lay .right .options li {
+  width: 25%;
+  height: 100%;
+  clip-path: circle(50px at 50% 50%);
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
+  transition: all 0.5s;
+  cursor: pointer;
+}
+.landing-page .lay .right .options li > div, .landing-page .lay .right .options li i {
+  transition: all 0.5s;
+}
+.landing-page .lay .right .options li:hover {
+  clip-path: circle(100%);
+  background-color: rgba(77, 161, 145, 0.42);
+}
+.landing-page .lay .right .options li:hover > i, .landing-page .lay .right .options li:hover div {
+  transform: scale(1.3);
 }
 .landing-page .lay .right .options li i {
   font-size: 140%;
-  background-color: #dec1b6;
   width: 45px;
   height: 45px;
   text-align: center;

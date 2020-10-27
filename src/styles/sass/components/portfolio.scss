@@ -1,0 +1,24 @@
+@use '../libs' as *;
+
+#portfolio {
+    padding: 5%;
+    // background-color: rgb(99, 99, 99);
+    background: linear-gradient(to left, white, rgba(255, 255, 255, 0.664)), url(../../../imgs/pexels-gdtography-911738.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    h1 {
+        font-size: 140%;
+        font-family: $accent-font;
+    }
+
+    .tags {
+        .tag {
+            background-color: rgb(178, 222, 76);
+            margin: 5px 10px;
+            padding: 3px 6px;
+            border-radius: 10px;
+        }
+    }
+}
