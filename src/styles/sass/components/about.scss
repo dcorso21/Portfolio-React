@@ -1,0 +1,30 @@
+@use '../libs' as *;
+#about {
+    padding: 5%;
+    background: linear-gradient(
+            to top,
+            rgb(255, 255, 255),
+            rgba(255, 255, 255, 0.295)
+        ),
+        url(../../../imgs/alyssa-hurley-yekIZ4ltv1o-unsplash.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .lay {
+        @include flex-center;
+        width: 50%;
+        height: 50%;
+        margin: auto;
+
+        .title {
+            width: 40%;
+            height: 100%;
+            background-color: green;
+        }
+        .info {
+            width: 60%;
+            height: 100%;
+        }
+    }
+}

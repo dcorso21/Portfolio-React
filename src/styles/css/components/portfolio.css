@@ -10,7 +10,7 @@
 
 #portfolio {
   padding: 5%;
-  background: linear-gradient(to left, white, rgba(255, 255, 255, 0.664)), url(../../../imgs/pexels-gdtography-911738.jpg);
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0.836)), url(../../../imgs/pexels-gdtography-911738.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -24,4 +24,5 @@
   margin: 5px 10px;
   padding: 3px 6px;
   border-radius: 10px;
+  cursor: pointer;
 }

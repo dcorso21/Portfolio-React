@@ -1,15 +1,21 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import reportWebVitals from "./reportWebVitals";
 import "./styles/css/main.css";
 import Landing from "./components/landing";
 import Portfolio from "./components/portfolio";
-import reportWebVitals from "./reportWebVitals";
+import About from "./components/about";
+import Resume from "./components/resume";
+import Contact from "./components/contact";
 
 ReactDOM.render(
     <React.StrictMode>
         <div className="layout">
             <Landing />
             <Portfolio />
+            <Resume />
+            <About />
+            <Contact />
         </div>
     </React.StrictMode>,
     document.getElementById("root")

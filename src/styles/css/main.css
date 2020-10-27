@@ -10,18 +10,91 @@
   --fg: #363636;
 }
 
-html, body, div, span, applet, object,
-iframe, h1, h2, h3, h4, h5, h6, p, blockquote,
-pre, a, abbr, acronym, address, big, cite,
-code, del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var, b,
-u, i, center, dl, dt, dd, ol, ul, li, fieldset,
-form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside,
-canvas, details, embed, figure, figcaption,
-footer, header, hgroup, menu, nav, output, ruby,
-section, summary, time, mark, audio, video {
+* {
   box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -30,8 +103,17 @@ section, summary, time, mark, audio, video {
   vertical-align: baseline;
 }
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -39,14 +121,18 @@ body {
   line-height: 1;
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
-blockquote:before, blockquote:after, q:before, q:after {
+blockquote:before, blockquote:after,
+q:before,
+q:after {
   content: "";
   content: none;
 }
@@ -70,7 +156,9 @@ input::-moz-focus-inner {
   padding: 0;
 }
 
-input, select, textarea {
+input,
+select,
+textarea {
   -moz-appearance: none;
   -webkit-appearance: none;
   -ms-appearance: none;
@@ -81,18 +169,15 @@ html {
   scroll-behavior: smooth;
 }
 
-/* width */
 ::-webkit-scrollbar {
   width: 10px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: transparent;
   border-radius: 10px;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(0, 0, 0, 0.625);
   border-radius: 10px;
@@ -108,10 +193,15 @@ body,
 .layout {
   height: 100vh;
   overflow-y: scroll;
-  scroll-snap-type: mandatory;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
-
-section {
-  height: 100vh;
+.layout section {
   scroll-snap-align: start;
+  height: 100vh;
+}
+.layout section h1,
+.layout section h2,
+.layout section h3 {
+  font-family: "Prata", serif;
 }
