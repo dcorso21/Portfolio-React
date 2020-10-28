@@ -9,34 +9,44 @@ export default class Menu extends Component {
         };
     }
 
+    listSections() {
+        let sections = ["home", "about", "resume", "portfolio", "contact"];
+        return sections.map((s) => {
+            return (
+                <li
+                    onClick={() => {
+                        this.setState({ menuOpen: !this.state.menuOpen });
+                    }}
+                >
+                    <a href={`#${s}`}>{s}</a>
+                </li>
+            );
+        });
+    }
+
     darkModeToggle() {
-        let body = document.getElementById('root')
-        body.classList.toggle('darkMode')
+        let body = document.getElementById("root");
+        body.classList.toggle("darkMode");
+        // body.classList.toggle("dark");
     }
 
     renderMenu() {
         if (!this.state.menuOpen) return null;
         return (
-            <div className="menu">
-                <ul>
-                    <li>
-                        <a href="#home">Home</a>
-                    </li>
-                    <li>
-                        <a href="#about">About</a>
-                    </li>
-                    <li>
-                        <a href="#resume">Resume</a>
-                    </li>
-                    <li>
-                        <a href="#portfolio">Portfolio</a>
-                    </li>
-                    <li>
-                        <a href="#contact">Contact</a>
-                    </li>
-                    <div className="dark-btn" onClick={this.darkModeToggle}>Dark Mode</div>
+            <>
+                <div
+                    className="back-blur"
+                    onClick={() => {
+                        this.setState({ menuOpen: !this.state.menuOpen });
+                    }}
+                ></div>
+                <ul className="menu">
+                    {this.listSections()}
+                    <div className="dark-btn" onClick={this.darkModeToggle}>
+                        Dark Mode
+                    </div>
                 </ul>
-            </div>
+            </>
         );
     }
 
@@ -47,7 +57,7 @@ export default class Menu extends Component {
                 <div
                     className="menu-btn"
                     onClick={() => {
-                        this.setState({menuOpen:!this.state.menuOpen});
+                        this.setState({ menuOpen: !this.state.menuOpen });
                     }}
                 >
                     <div className="bar"></div>

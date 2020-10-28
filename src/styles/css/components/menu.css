@@ -1,14 +1,18 @@
-.menu {
+/*  Menu  */
+.back-blur {
   position: absolute;
   top: 0;
   bottom: 0;
   right: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.226);
-  z-index: 100;
   backdrop-filter: blur(5px);
+  z-index: 99;
 }
-.menu ul {
+
+.menu {
+  position: absolute;
+  width: 30%;
   z-index: 105;
   display: flex;
   flex-direction: column;
@@ -20,11 +24,35 @@
   width: 20vw;
   margin: 20vh 40vw;
 }
-.menu ul a {
+.menu > * {
+  padding: 3px;
+}
+.menu li {
+  /*  Hello  */
+  border-bottom: 3px solid transparent;
+  transition: all 0.3s;
+}
+.menu li:hover:nth-of-type(1) {
+  border-bottom: 3px solid var(--a-purple);
+}
+.menu li:hover:nth-of-type(2) {
+  border-bottom: 3px solid var(--a-blue);
+}
+.menu li:hover:nth-of-type(3) {
+  border-bottom: 3px solid var(--a-green);
+}
+.menu li:hover:nth-of-type(4) {
+  border-bottom: 3px solid var(--a-yellow);
+}
+.menu li:hover:nth-of-type(5) {
+  border-bottom: 3px solid var(--a-pink);
+}
+.menu li a {
   color: white;
   text-decoration: none;
+  text-transform: capitalize;
 }
-.menu ul .dark-btn {
+.menu .dark-btn {
   padding: 10px;
   background-color: grey;
   color: white;

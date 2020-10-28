@@ -1,0 +1,47 @@
+@use '../libs' as *;
+
+/*  Contact Page  */
+#contact {
+    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.664)),
+        url(../../../imgs/contact.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    padding: 3%;
+    display: grid;
+    grid-template-rows: 10% 90%;
+
+    .topbar {
+        grid-row: 1;
+        h1 {
+            font-size: 240%;
+            border-bottom: 4px solid gc(a-pink);
+            width: fit-content;
+        }
+    }
+
+    .main {
+        grid-row: 2;
+        @include flex-center;
+        height: 100%;
+        width: 90%;
+
+        & > * {
+            height: 80%;
+        }
+
+        margin: 0% 5%;
+        .info {
+            border: 20px solid gc(a-pink);
+            width: 50%;
+        }
+
+        form {
+            background-color: gc(a-pink);
+            width: 50%;
+        }
+    }
+
+
+}

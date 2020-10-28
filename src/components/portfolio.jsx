@@ -37,6 +37,30 @@ function openInNewTab(url) {
 function makeProjects() {
     let projects = [
         {
+            title: "Algorithmic Trading Backtester",
+            link: "https://github.com/dcorso21/SQLite3_Library",
+            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+            description:
+                "Strategy Tester for algorithmic trading with second by second trades",
+            tags: ["Python", "Pandas", "Plotly"],
+        },
+        {
+            title: "MySQL Dual Database Library Management",
+            link: "https://github.com/dcorso21/SQLite3_Library",
+            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+            description:
+                "Framework for crossreferencing two sql databases in python",
+            tags: ["Python", "SQL"],
+        },
+        {
+            title: "Simple Accounting in C++",
+            link: "https://github.com/dcorso21/Accounting-in-CPP",
+            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+            description:
+                "For a first project, I make a console application for adding and deleting entries of a csv database in C++",
+            tags: ["C++"],
+        },
+        {
             title: "Sorting Visualizer",
             link: "https://dcorson-sorting-visualizer.netlify.app/",
             imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
@@ -50,6 +74,14 @@ function makeProjects() {
             imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
             description: "Interactive Path Finder",
             tags: ["Javascript", "CSS", "HTML"],
+        },
+        {
+            title: "React Movie Viewer",
+            link: "https://github.com/dcorso21/Movie-Viewer",
+            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+            description:
+                "A simple app that takes advantage of the rapidMovieAPI to find info on popular movies.",
+            tags: ["REST API", "React"],
         },
         {
             title: "Sudoku Solver",
@@ -110,15 +142,16 @@ export default class Portfolio extends Component {
                     <div className="topbar">
                         <h1>Portfolio</h1>
                         <div className="searchBar">
-                            <input type="text" placeholder="Search for Keywords" />
+                            <input
+                                type="text"
+                                placeholder="Search for Keywords"
+                            />
                             <i className="fas fa-search"></i>
                         </div>
                     </div>
                     <div className="tags">{makeTags()}</div>
                 </div>
-                <div className="projects">
-                    {makeProjects()}
-                </div>
+                <div className="projects">{makeProjects()}</div>
             </section>
         );
     }

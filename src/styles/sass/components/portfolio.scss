@@ -1,5 +1,7 @@
 @use '../libs' as *;
 
+/*  PortFolio  */
+
 #portfolio {
     padding: 3%;
     background: linear-gradient(to right, white, rgba(255, 255, 255, 0.836)),
@@ -27,6 +29,7 @@
             .searchBar {
                 position: absolute;
                 display: flex;
+                align-items: center;
                 bottom: 0;
                 margin-left: 35%;
                 width: 30%;
@@ -35,12 +38,22 @@
                 border: 1px solid rgba(155, 155, 155, 0.329);
                 border-radius: 30px;
 
+                &:focus-within {
+                    border: 1px solid rgba(68, 180, 228, 0.858);
+
+                    & i {
+                        color: rgba(68, 180, 228, 0.858);
+                    }
+                }
+
                 input {
                     background-color: transparent;
                     height: 100%;
                     outline: none;
                     border: none;
                     width: 92%;
+                    height: 100%;
+                    font-size: 110%;
                 }
             }
         }
@@ -63,15 +76,23 @@
         display: flex;
         flex-wrap: wrap;
         align-content: flex-start;
+        justify-content: center;
         overflow-y: scroll;
         scrollbar-color: rgba(0, 0, 0, 0.082);
         padding-top: 10px;
+
+        box-shadow: inset 0 0  12px rgba(0, 0, 0, 0.119);
+        border-radius: 16px;
+
+
         .project {
             z-index: 5;
             background-color: rgba(0, 0, 0, 0.322);
-            height: 45%;
-            width: 33%;
-            transition: all .5s;
+            height: 40%;
+            width: 30%;
+            transition: all 0.5s;
+            margin: 5px;
+            border-radius: 10px;
 
             padding: 20px;
             display: flex;
@@ -79,10 +100,8 @@
             justify-content: space-between;
             align-items: flex-start;
 
-
             &:hover {
-                background-color: gc(a-blue);
-                // transform: scale(1.05);
+                background-color: gc(a-yellow);
             }
 
             .title {
@@ -94,7 +113,6 @@
                 background-color: #ffffff83;
                 @include tag;
             }
-
         }
     }
 }

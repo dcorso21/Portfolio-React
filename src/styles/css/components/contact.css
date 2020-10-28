@@ -1,0 +1,38 @@
+/*  Contact Page  */
+#contact {
+  background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.664)), url(../../../imgs/contact.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 3%;
+  display: grid;
+  grid-template-rows: 10% 90%;
+}
+#contact .topbar {
+  grid-row: 1;
+}
+#contact .topbar h1 {
+  font-size: 240%;
+  border-bottom: 4px solid var(--a-pink);
+  width: fit-content;
+}
+#contact .main {
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 90%;
+  margin: 0% 5%;
+}
+#contact .main > * {
+  height: 80%;
+}
+#contact .main .info {
+  border: 20px solid var(--a-pink);
+  width: 50%;
+}
+#contact .main form {
+  background-color: var(--a-pink);
+  width: 50%;
+}

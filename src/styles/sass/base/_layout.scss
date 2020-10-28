@@ -1,8 +1,28 @@
 @use '../libs' as *;
 
-// Fonts
+/*  Import Comments  */
 @import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,400;1,200;1,400&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Prata&display=swap");
+
+/*  Setting Color Palettes  */
+:root {
+    @each $name, $color in $color_palette {
+        --#{$name}: #{$color};
+    }
+}
+
+
+/*  Default Dark Theme  */
+
+.dark {
+    @each $name, $color in $dark_color_palette {
+        --#{$name}: #{$color};
+    }
+
+    section {
+        backdrop-filter: invert(1);
+    }
+}
 
 html {
     scroll-behavior: smooth;
