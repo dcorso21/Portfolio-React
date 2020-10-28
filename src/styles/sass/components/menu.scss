@@ -1,6 +1,6 @@
 .menu {
     position: absolute;
-    display: none;
+    // display: none;
     top: 0;
     bottom: 0;
     right: 0;
@@ -8,8 +8,7 @@
 
     background-color: rgba(0, 0, 0, 0.226);
     z-index: 100;
-    // backdrop-filter: blur(5px);
-    // filter: invert(1);
+    backdrop-filter: blur(5px);
     
     ul{
         z-index: 105;
@@ -27,6 +26,12 @@
         a {
             color: white;
             text-decoration: none;
+        }
+        .dark-btn {
+            padding: 10px;
+            background-color: grey;
+            color: white;
+            cursor: pointer;
         }
     }
 }
@@ -52,4 +57,11 @@
         background-color: #000;
         border-radius: 10px;
     }
+
 }
+
+.darkMode {
+    filter: invert(1);
+}
+
+

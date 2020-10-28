@@ -1,11 +1,22 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import "../styles/css/components/menu.css";
 
 export default class Menu extends Component {
-    
-    render() {
+    constructor() {
+        super();
+        this.state = {
+            menuOpen: false,
+        };
+    }
+
+    darkModeToggle() {
+        let body = document.getElementById('root')
+        body.classList.toggle('darkMode')
+    }
+
+    renderMenu() {
+        if (!this.state.menuOpen) return null;
         return (
-            <> 
             <div className="menu">
                 <ul>
                     <li>
@@ -23,14 +34,27 @@ export default class Menu extends Component {
                     <li>
                         <a href="#contact">Contact</a>
                     </li>
+                    <div className="dark-btn" onClick={this.darkModeToggle}>Dark Mode</div>
                 </ul>
             </div>
-            <div className="menu-btn">
-                <div className="bar"></div>
-                <div className="bar"></div>
-                <div className="bar"></div>
-            </div>
+        );
+    }
+
+    render() {
+        return (
+            <>
+                {this.renderMenu()}
+                <div
+                    className="menu-btn"
+                    onClick={() => {
+                        this.setState({menuOpen:!this.state.menuOpen});
+                    }}
+                >
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                    <div className="bar"></div>
+                </div>
             </>
-        )
+        );
     }
 }
