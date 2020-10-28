@@ -46,7 +46,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    // height: 70px;
 
     div {
         height: 3px;
@@ -61,7 +60,7 @@
 }
 
 .darkMode {
-    filter: invert(1);
+    filter: invert(.95);
 }
 
 

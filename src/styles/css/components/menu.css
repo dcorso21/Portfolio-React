@@ -51,5 +51,5 @@
 }
 
 .darkMode {
-  filter: invert(1);
+  filter: invert(0.95);
 }
