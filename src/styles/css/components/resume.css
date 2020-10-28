@@ -1,0 +1,10 @@
+#resume {
+  padding: 3%;
+  background: linear-gradient(to right, white, rgba(255, 255, 255, 0.562)), url(../../../imgs/christian-perner-UKLIuV8rAks-unsplash.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#resume h1 {
+  font-size: 240%;
+}

@@ -1,6 +1,8 @@
 @use '../libs' as *;
 .landing-page {
-    background: linear-gradient(to left, white, rgba(255, 255, 255, 0.664)), url(../../../imgs/pexels-henry-&-co-1939485.jpg);
+    grid-column: 1;
+    background: linear-gradient(to left, white, rgba(255, 255, 255, 0.664)),
+        url(../../../imgs/pexels-henry-&-co-1939485.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -10,6 +12,7 @@
         height: 100%;
         width: 100%;
         padding: 10%;
+        // color: white;
         .left {
             background-color: rgb(184, 184, 232);
             width: 30%;
@@ -45,26 +48,40 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
-                    transition: all .5s;
+                    transition: all 0.5s;
                     cursor: pointer;
+                    background-color: transparent;
 
-                    & > div, i {
+                    & > div,
+                    i {
                         font-size: 150%;
-                        transition: all .5s;
-                        transform: scale(.7);
+                        transition: all 0.5s;
+                        transform: scale(0.7);
                     }
 
                     &:hover {
                         clip-path: circle(100%);
-                        background-color: rgba(77, 161, 145, 0.42);
-                        & > i, div {
+                        &#about-btn {
+                            background-color: gc(a-blue);
+                        }
+                        &#resume-btn {
+                            background-color: gc(a-green);
+                        }
+                        &#port-btn {
+                            background-color: gc(a-yellow);
+                        }
+                        &#contact-btn {
+                            background-color: gc(a-pink);
+                        }
+
+                        & > i,
+                        div {
                             transform: scale(1);
                         }
 
                         & > div {
                             transform: translateY(15px);
                         }
-
                     }
 
                     i {
@@ -75,10 +92,8 @@
                         vertical-align: center;
                         border-radius: 50%;
                     }
-
                 }
             }
         }
     }
-
 }

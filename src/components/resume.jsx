@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
+import "../styles/css/components/resume.css";
 
 export default class Resume extends Component {
     render() {
         return (
             <section id="resume">
-                Resume Here
+                <h1>Resume</h1>
             </section>
         )
     }

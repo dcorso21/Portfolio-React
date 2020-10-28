@@ -12,9 +12,9 @@ ReactDOM.render(
     <React.StrictMode>
         <div className="layout">
             <Landing />
-            <Portfolio />
-            <Resume />
             <About />
+            <Resume />
+            <Portfolio />
             <Contact />
         </div>
     </React.StrictMode>,

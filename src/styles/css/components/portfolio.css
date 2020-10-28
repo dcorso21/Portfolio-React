@@ -1,6 +1,11 @@
 :root {
   --fg: #1b1b1b;
   --bg: #fff;
+  --a-yellow: rgba(249, 169, 83, 0.644);
+  --a-green: rgba(6, 214, 158, 0.651);
+  --a-blue: rgba(17, 138, 178, 0.651);
+  --a-purple: rgba(127, 106, 147, 0.651);
+  --a-pink: rgba(239, 71, 110, 0.658);
 }
 
 .dark {
@@ -9,20 +14,69 @@
 }
 
 #portfolio {
-  padding: 5%;
+  padding: 3%;
   background: linear-gradient(to right, white, rgba(255, 255, 255, 0.836)), url(../../../imgs/pexels-gdtography-911738.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: grid;
+  grid-template-rows: 18% 1fr;
 }
-#portfolio h1 {
-  font-size: 140%;
+#portfolio .row-1 {
+  grid-row: 1;
+}
+#portfolio .row-1 .topbar {
+  display: flex;
+  position: relative;
+}
+#portfolio .row-1 .topbar h1 {
+  font-size: 240%;
   font-family: "Prata", serif;
 }
-#portfolio .tags .tag {
+#portfolio .row-1 .topbar .searchBar {
+  position: absolute;
+  display: flex;
+  bottom: 0;
+  margin-left: 35%;
+  width: 30%;
+  border-bottom: 1px solid var(--a-blue);
+  background-color: transparent;
+}
+#portfolio .row-1 .topbar .searchBar input {
+  background-color: transparent;
+  outline: none;
+  border: none;
+  width: 92%;
+}
+#portfolio .row-1 .tags {
+  text-align: center;
+  margin: 20px 0;
+}
+#portfolio .row-1 .tags .tag {
   background-color: #b2de4c;
   margin: 5px 10px;
   padding: 3px 6px;
   border-radius: 10px;
   cursor: pointer;
+}
+#portfolio .projects {
+  grid-row: 2;
+  height: 100%;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  overflow-y: scroll;
+  scrollbar-color: rgba(0, 0, 0, 0.082);
+  padding-top: 10px;
+}
+#portfolio .projects .project {
+  background-color: rgba(0, 0, 0, 0.322);
+  height: 45%;
+  width: 33%;
+  transition: all 0.5s;
+}
+#portfolio .projects .project:hover {
+  background-color: var(--a-blue);
+  transform: scale(1.05);
 }

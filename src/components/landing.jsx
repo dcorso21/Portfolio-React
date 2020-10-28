@@ -13,7 +13,7 @@ export default class Landing extends Component {
         return (
             <section className="landing-page" id="home">
                 <div className="lay">
-                    <div className="left">
+                    <div className="left" style={{backgroundColor: "var(--a-purple)"}}>
                         <h1 className="my-name">David Corson</h1>
                         <div className="descriptors">
                             Software Engineering, Front End Design
@@ -21,19 +21,19 @@ export default class Landing extends Component {
                     </div>
                     <div className="right">
                         <ul className="options">
-                            <li onClick={() => scrollTo("portfolio")}>
-                                <i className="fas fa-project-diagram"></i>
-                                <div className="label">Portfolio</div>
-                            </li>
-                            <li onClick={() => scrollTo("resume")}>
-                                <i className="far fa-file-alt"></i>
-                                <div className="label">Resume</div>
-                            </li>
-                            <li onClick={() => scrollTo("about")}>
+                            <li onClick={() => scrollTo("about")} id="about-btn">
                                 <i className="far fa-address-card"></i>
                                 <div className="label">About</div>
                             </li>
-                            <li onClick={() => scrollTo("contact")}>
+                            <li onClick={() => scrollTo("resume")} id="resume-btn">
+                                <i className="far fa-file-alt"></i>
+                                <div className="label">Resume</div>
+                            </li>
+                            <li onClick={() => scrollTo("portfolio")} id="port-btn">
+                                <i className="fas fa-project-diagram"></i>
+                                <div className="label">Portfolio</div>
+                            </li>
+                            <li onClick={() => scrollTo("contact")} id="contact-btn">
                                 <i className="far fa-envelope"></i>
                                 <div className="label">Contact</div>
                             </li>

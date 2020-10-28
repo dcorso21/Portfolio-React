@@ -1,6 +1,11 @@
 :root {
   --fg: #1b1b1b;
   --bg: #fff;
+  --a-yellow: rgba(249, 169, 83, 0.644);
+  --a-green: rgba(6, 214, 158, 0.651);
+  --a-blue: rgba(17, 138, 178, 0.651);
+  --a-purple: rgba(127, 106, 147, 0.651);
+  --a-pink: rgba(239, 71, 110, 0.658);
 }
 
 .dark {
@@ -9,6 +14,7 @@
 }
 
 .landing-page {
+  grid-column: 1;
   background: linear-gradient(to left, white, rgba(255, 255, 255, 0.664)), url(../../../imgs/pexels-henry-&-co-1939485.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -59,17 +65,31 @@
   align-items: center;
   transition: all 0.5s;
   cursor: pointer;
+  background-color: transparent;
 }
-.landing-page .lay .right .options li > div, .landing-page .lay .right .options li i {
+.landing-page .lay .right .options li > div,
+.landing-page .lay .right .options li i {
   font-size: 150%;
   transition: all 0.5s;
   transform: scale(0.7);
 }
 .landing-page .lay .right .options li:hover {
   clip-path: circle(100%);
-  background-color: rgba(77, 161, 145, 0.42);
 }
-.landing-page .lay .right .options li:hover > i, .landing-page .lay .right .options li:hover div {
+.landing-page .lay .right .options li:hover#about-btn {
+  background-color: var(--a-blue);
+}
+.landing-page .lay .right .options li:hover#resume-btn {
+  background-color: var(--a-green);
+}
+.landing-page .lay .right .options li:hover#port-btn {
+  background-color: var(--a-yellow);
+}
+.landing-page .lay .right .options li:hover#contact-btn {
+  background-color: var(--a-pink);
+}
+.landing-page .lay .right .options li:hover > i,
+.landing-page .lay .right .options li:hover div {
   transform: scale(1);
 }
 .landing-page .lay .right .options li:hover > div {
