@@ -1,3 +1,5 @@
+@use '../libs' as *;
+
 #resume {
     // width: 100vw;
     padding: 3%;
@@ -9,5 +11,7 @@
 
     h1 {
         font-size: 240%;
+        border-bottom: 4px solid gc(a-green);
+        width: fit-content;
     }
 }
