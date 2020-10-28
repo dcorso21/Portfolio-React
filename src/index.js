@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
 import "./styles/css/main.css";
+import Menu from "./components/menu";
 import Landing from "./components/landing";
 import Portfolio from "./components/portfolio";
 import About from "./components/about";
@@ -11,6 +12,7 @@ import Contact from "./components/contact";
 ReactDOM.render(
     <React.StrictMode>
         <div className="layout">
+            <Menu />
             <Landing />
             <About />
             <Resume />

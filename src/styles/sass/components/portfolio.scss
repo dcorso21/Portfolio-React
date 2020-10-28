@@ -21,6 +21,7 @@
             h1 {
                 font-size: 240%;
                 font-family: $accent-font;
+                border-bottom: 4px solid gc(a-yellow);
             }
 
             .searchBar {
@@ -29,11 +30,14 @@
                 bottom: 0;
                 margin-left: 35%;
                 width: 30%;
-                border-bottom: 1px solid gc(a-blue);
-                background-color: transparent;
+                padding: 10px;
+                background-color: gc(bg);
+                border: 1px solid rgba(155, 155, 155, 0.329);
+                border-radius: 30px;
 
                 input {
                     background-color: transparent;
+                    height: 100%;
                     outline: none;
                     border: none;
                     width: 92%;
@@ -46,9 +50,7 @@
             margin: 20px 0;
             .tag {
                 background-color: rgb(178, 222, 76);
-                margin: 5px 10px;
-                padding: 3px 6px;
-                border-radius: 10px;
+                @include tag;
                 cursor: pointer;
             }
         }
@@ -65,15 +67,34 @@
         scrollbar-color: rgba(0, 0, 0, 0.082);
         padding-top: 10px;
         .project {
+            z-index: 5;
             background-color: rgba(0, 0, 0, 0.322);
             height: 45%;
             width: 33%;
             transition: all .5s;
 
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: flex-start;
+
+
             &:hover {
                 background-color: gc(a-blue);
-                transform: scale(1.05);
+                // transform: scale(1.05);
             }
+
+            .title {
+                font-family: $accent-font;
+                font-size: 150%;
+            }
+
+            .tag {
+                background-color: #ffffff83;
+                @include tag;
+            }
+
         }
     }
 }

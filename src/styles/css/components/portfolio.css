@@ -32,6 +32,7 @@
 #portfolio .row-1 .topbar h1 {
   font-size: 240%;
   font-family: "Prata", serif;
+  border-bottom: 4px solid var(--a-yellow);
 }
 #portfolio .row-1 .topbar .searchBar {
   position: absolute;
@@ -39,11 +40,14 @@
   bottom: 0;
   margin-left: 35%;
   width: 30%;
-  border-bottom: 1px solid var(--a-blue);
-  background-color: transparent;
+  padding: 10px;
+  background-color: var(--bg);
+  border: 1px solid rgba(155, 155, 155, 0.329);
+  border-radius: 30px;
 }
 #portfolio .row-1 .topbar .searchBar input {
   background-color: transparent;
+  height: 100%;
   outline: none;
   border: none;
   width: 92%;
@@ -71,12 +75,27 @@
   padding-top: 10px;
 }
 #portfolio .projects .project {
+  z-index: 5;
   background-color: rgba(0, 0, 0, 0.322);
   height: 45%;
   width: 33%;
   transition: all 0.5s;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 #portfolio .projects .project:hover {
   background-color: var(--a-blue);
-  transform: scale(1.05);
+}
+#portfolio .projects .project .title {
+  font-family: "Prata", serif;
+  font-size: 150%;
+}
+#portfolio .projects .project .tag {
+  background-color: #ffffff83;
+  margin: 5px 10px;
+  padding: 3px 6px;
+  border-radius: 10px;
 }
