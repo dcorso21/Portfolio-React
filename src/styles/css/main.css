@@ -165,6 +165,7 @@ textarea {
   --fg: #1b1b1b;
   --bg: #fff;
   --a-yellow: rgba(249, 169, 83, 0.644);
+  --a-yellow-trans: rgba(58, 56, 65, 0.591);
   --a-green: rgba(6, 214, 158, 0.651);
   --a-blue: rgba(17, 138, 178, 0.651);
   --a-purple: rgba(127, 106, 147, 0.651);

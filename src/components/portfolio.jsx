@@ -45,21 +45,6 @@ function makeProjects() {
             tags: ["Python", "Pandas", "Plotly"],
         },
         {
-            title: "MySQL Dual Database Library Management",
-            link: "https://github.com/dcorso21/SQLite3_Library",
-            description:
-                "Framework for crossreferencing two sql databases in python",
-            tags: ["Python", "SQL"],
-        },
-        {
-            title: "Simple Accounting in C++",
-            link: "https://github.com/dcorso21/Accounting-in-CPP",
-
-            description:
-                "For a first project, I make a console application for adding and deleting entries of a csv database in C++",
-            tags: ["C++"],
-        },
-        {
             title: "Sorting Visualizer",
             link: "https://dcorson-sorting-visualizer.netlify.app/",
             imagelink: require("../imgs/portfolio-thumbnails/sorting-vis.jpg").default,
@@ -84,7 +69,7 @@ function makeProjects() {
         },
         {
             title: "Sudoku Solver",
-            link: "https://dcorson-sudoku-solver.netlify.app",
+            link: "https://dcorso21.github.io/Sudoku-Solver/",
             imagelink: require("../imgs/portfolio-thumbnails/sudoku.png").default,
             description: "App which can solve sudokus instantly",
             tags: ["Javascript", "CSS", "HTML"],
@@ -92,23 +77,39 @@ function makeProjects() {
         {
             title: "Gmail Clone",
             link: "https://dcorson-gmail-clone.netlify.app",
-
+            imagelink: require("../imgs/portfolio-thumbnails/gmail.png").default,
             description: "A remake of the Gmail front end design",
             tags: ["Javascript", "CSS", "HTML"],
         },
         {
             title: "YouTube Clone",
-            link: "https://dcorson-youtube-clone.netlify.app",
-
+            link: "https://dcorso21.github.io/youtube-clone/",
+            imagelink: require("../imgs/portfolio-thumbnails/youtube.png").default,
             description: "A remake of the YouTube front end design",
             tags: ["Javascript", "CSS", "HTML"],
         },
         {
             title: "Twitter Clone",
-            link: "https://dcorson-twitter-clone.netlify.app",
+            link: "https://dcorso21.github.io/Twitter-Clone/",
+            imagelink: require("../imgs/portfolio-thumbnails/twitter.png").default,
 
             description: "A remake of the Twitter front end design",
             tags: ["Javascript", "CSS", "HTML"],
+        },
+        {
+            title: "MySQL Dual Database Library Management",
+            link: "https://github.com/dcorso21/SQLite3_Library",
+            description:
+                "Framework for crossreferencing two sql databases in python",
+            tags: ["Python", "SQL"],
+        },
+        {
+            title: "Simple Accounting in C++",
+            link: "https://github.com/dcorso21/Accounting-in-CPP",
+
+            description:
+                "For a first project, I make a console application for adding and deleting entries of a csv database in C++",
+            tags: ["C++"],
         },
     ];
 
@@ -132,10 +133,11 @@ function makeProjects() {
 
         return (
             <div
-                style={style}
-                className="project"
-                onClick={() => openInNewTab(p.link)}
+            style={style}
+            className="project"
+            onClick={() => openInNewTab(p.link)}
             >
+                <div className="blurCard"></div>
                 <div className="title">{p.title}</div>
                 <div className="description">{p.description}</div>
                 <div className="tags">{addTags(p.tags)}</div>
