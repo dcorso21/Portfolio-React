@@ -38,8 +38,8 @@ function makeProjects() {
     let projects = [
         {
             title: "Algorithmic Trading Backtester",
-            link: "https://github.com/dcorso21/SQLite3_Library",
-            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+            link: "https://dcorso21.github.io/Algo-Trading-Backtester/",
+            imagelink: require("../imgs/portfolio-thumbnails/algo.png").default,
             description:
                 "Strategy Tester for algorithmic trading with second by second trades",
             tags: ["Python", "Pandas", "Plotly"],
@@ -47,7 +47,6 @@ function makeProjects() {
         {
             title: "MySQL Dual Database Library Management",
             link: "https://github.com/dcorso21/SQLite3_Library",
-            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
             description:
                 "Framework for crossreferencing two sql databases in python",
             tags: ["Python", "SQL"],
@@ -55,7 +54,7 @@ function makeProjects() {
         {
             title: "Simple Accounting in C++",
             link: "https://github.com/dcorso21/Accounting-in-CPP",
-            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+
             description:
                 "For a first project, I make a console application for adding and deleting entries of a csv database in C++",
             tags: ["C++"],
@@ -63,22 +62,22 @@ function makeProjects() {
         {
             title: "Sorting Visualizer",
             link: "https://dcorson-sorting-visualizer.netlify.app/",
-            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+            imagelink: require("../imgs/portfolio-thumbnails/sorting-vis.jpg").default,
             description:
                 "An app for showing the process of different sorting algorithms",
             tags: ["Javascript", "CSS", "HTML", "Anime.js"],
         },
         {
             title: "PathFinder",
-            link: "https://dcorson-pathfinder.netlify.app/",
-            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+            link: "https://dcorso21.github.io/Versatile-Pathfinder/index.html",
+            imagelink: require("../imgs/portfolio-thumbnails/pathfinder.png").default,
             description: "Interactive Path Finder",
             tags: ["Javascript", "CSS", "HTML"],
         },
         {
             title: "React Movie Viewer",
-            link: "https://github.com/dcorso21/Movie-Viewer",
-            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+            link: "https://dcorson-movie-viewer.netlify.app/",
+            imagelink: require("../imgs/portfolio-thumbnails/movies.png").default,
             description:
                 "A simple app that takes advantage of the rapidMovieAPI to find info on popular movies.",
             tags: ["REST API", "React"],
@@ -86,35 +85,44 @@ function makeProjects() {
         {
             title: "Sudoku Solver",
             link: "https://dcorson-sudoku-solver.netlify.app",
-            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+            imagelink: require("../imgs/portfolio-thumbnails/sudoku.png").default,
             description: "App which can solve sudokus instantly",
             tags: ["Javascript", "CSS", "HTML"],
         },
         {
             title: "Gmail Clone",
             link: "https://dcorson-gmail-clone.netlify.app",
-            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+
             description: "A remake of the Gmail front end design",
             tags: ["Javascript", "CSS", "HTML"],
         },
         {
             title: "YouTube Clone",
             link: "https://dcorson-youtube-clone.netlify.app",
-            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+
             description: "A remake of the YouTube front end design",
             tags: ["Javascript", "CSS", "HTML"],
         },
         {
             title: "Twitter Clone",
             link: "https://dcorson-twitter-clone.netlify.app",
-            imagelink: "src/imgs/portfolio-thumbnails/sorting-vis.jpg",
+
             description: "A remake of the Twitter front end design",
             tags: ["Javascript", "CSS", "HTML"],
         },
     ];
 
     return projects.map((p, i) => {
-        console.log({ background: `url(${p.imagelink})` });
+        // console.log({ background: `url(${p.imagelink})` });
+        console.log(typeof p.imagelink);
+        let style = !!p.imagelink
+            ? {
+                //   background: `url(${require("../imgs/portfolio-thumbnails/algo.png").default}`,
+                  background: `url(${p.imagelink})`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundSize: "cover",
+              }
+            : {};
 
         function addTags(tags) {
             return tags.map((t) => {
@@ -123,7 +131,11 @@ function makeProjects() {
         }
 
         return (
-            <div className="project" onClick={() => openInNewTab(p.link)}>
+            <div
+                style={style}
+                className="project"
+                onClick={() => openInNewTab(p.link)}
+            >
                 <div className="title">{p.title}</div>
                 <div className="description">{p.description}</div>
                 <div className="tags">{addTags(p.tags)}</div>
