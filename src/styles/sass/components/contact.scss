@@ -2,7 +2,11 @@
 
 /*  Contact Page  */
 #contact {
-    background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.664)),
+    background: linear-gradient(
+            to top,
+            rgba(255, 255, 255, 0),
+            rgba(255, 255, 255, 0.664)
+        ),
         url(../../../imgs/contact.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -38,16 +42,30 @@
             width: 50%;
             display: flex;
             flex-direction: column;
-            align-items: left;
-            justify-content: space-around;
+            align-items: center;
+            justify-content: center;
             padding: 40px;
             color: gc(bg);
 
             .info {
+                padding: 20px 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                h2 {
+                    font-size: 1.3rem;
+                    padding: 20px;
+                    padding-top: 0;
+                }
                 p {
                     span {
+                        padding: 5px;
                         &:before {
-                            content: "∙"
+                            content: "∙    ";
+                        }
+                        &:first-of-type:before{
+                            content: "";
                         }
                     }
                 }
@@ -56,33 +74,40 @@
             & > * {
                 display: flex;
                 flex-direction: column;
+                width: 100%;
                 label {
                     text-transform: capitalize;
                     padding: 5px;
                 }
-                input, textarea {
+                input,
+                textarea {
                     border: 2px solid transparent;
                     outline: none;
                     border-radius: 5px;
                     &:focus {
-                        border: 2px solid gc(fg);
+                        border: 2px solid gc(a-blue);
                     }
                 }
-
             }
 
             button {
-                margin: 0 30%;
+                color: gc(a-pink);
                 border-radius: 5px;
                 outline: none;
-                border: none;
+                border: 2px solid transparent;
+                width: min-content;
+                padding: 10px 20px;
+                margin-top: 20px;
+                font-style: italic;
+                cursor: pointer;
+                transition: all 0.3s;
 
-            
+                &:hover {
+                    color: gc(bg);
+                    background-color: gc(a-pink);
+                    border: 2px solid gc(bg);
+                }
             }
-
-            
         }
     }
-
-
 }

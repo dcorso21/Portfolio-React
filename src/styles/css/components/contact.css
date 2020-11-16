@@ -34,33 +34,65 @@
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: left;
-  justify-content: space-around;
+  align-items: center;
+  justify-content: center;
   padding: 40px;
   color: var(--bg);
 }
+#contact .main form .info {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+#contact .main form .info h2 {
+  font-size: 1.3rem;
+  padding: 20px;
+  padding-top: 0;
+}
+#contact .main form .info p span {
+  padding: 5px;
+}
 #contact .main form .info p span:before {
-  content: "∙";
+  content: "∙    ";
+}
+#contact .main form .info p span:first-of-type:before {
+  content: "";
 }
 #contact .main form > * {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 #contact .main form > * label {
   text-transform: capitalize;
   padding: 5px;
 }
-#contact .main form > * input, #contact .main form > * textarea {
+#contact .main form > * input,
+#contact .main form > * textarea {
   border: 2px solid transparent;
   outline: none;
   border-radius: 5px;
 }
-#contact .main form > * input:focus, #contact .main form > * textarea:focus {
-  border: 2px solid var(--fg);
+#contact .main form > * input:focus,
+#contact .main form > * textarea:focus {
+  border: 2px solid var(--a-blue);
 }
 #contact .main form button {
-  margin: 0 30%;
+  color: var(--a-pink);
   border-radius: 5px;
   outline: none;
-  border: none;
+  border: 2px solid transparent;
+  width: min-content;
+  padding: 10px 20px;
+  margin-top: 20px;
+  font-style: italic;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+#contact .main form button:hover {
+  color: var(--bg);
+  background-color: var(--a-pink);
+  border: 2px solid var(--bg);
 }

@@ -9,30 +9,13 @@ export default class Contact extends Component {
                     <h1>Contact</h1>
                 </div>
                 <div className="main">
-                    {/* <div className="info">
-                        <div className="email">
-                            {" "}
-                            <span className="fieldname">EMAIL:&nbsp;</span>{" "}
-                            david.l.corson@gmail.com
-                        </div>
-                        <div className="phone">
-                            <span className="fieldname">PHONE:&nbsp;</span>(937)
-                            414-5106
-                        </div>
-                        <div className="address">
-                            {" "}
-                            <span className="fieldname">
-                                ADDRESS:&nbsp;
-                            </span>{" "}
-                            Ocala, FL
-                        </div>
-                    </div> */}
                     <form name="contact" method="POST" data-netlify="true">
                         <div className="info">
+                            <h2>Get in Touch</h2>
                             <p>
-                            <span>(937) 414 - 5106</span>
-                            <span>david.l.corson@gmail.com</span>
-                            <span>Ocala, FL</span>
+                                <span>(937) 414 - 5106</span>
+                                <span>david.l.corson@gmail.com</span>
+                                <span>Ocala, FL</span>
                             </p>
                         </div>
                         <div className="nameEntry">

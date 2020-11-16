@@ -1,33 +1,6 @@
 import React, { Component } from "react";
 import "../styles/css/components/portfolio.css";
 
-// function makeTags() {
-//     let tags = [
-//             "Python",
-//             "Javascript",
-//             "Sass",
-//             "HTML",
-//             "pug",
-//             "Pandas",
-//             "React",
-//         ],
-//         colors = ["purple", "blue", "green", "yellow", "pink"];
-
-//     return tags.map((t, i) => {
-//         if (i !== 0) {
-//             colors.push(colors.shift());
-//         }
-//         return (
-//             <span
-//                 className="tag"
-//                 style={{ backgroundColor: `var(--a-${colors[0]})` }}
-//             >
-//                 {t}
-//             </span>
-//         );
-//     });
-// }
-
 function openInNewTab(url) {
     console.log("hello");
     var win = window.open(url, "_blank");
@@ -98,6 +71,7 @@ function makeProjects() {
         {
             title: "MySQL Dual Database Library Management",
             link: "https://github.com/dcorso21/SQLite3_Library",
+            imagelink: require("../imgs/portfolio-thumbnails/library.jpg").default,
             description:
                 "Framework for crossreferencing two sql databases in python",
             tags: ["Python", "SQL"],
@@ -105,6 +79,7 @@ function makeProjects() {
         {
             title: "Simple Accounting in C++",
             link: "https://github.com/dcorso21/Accounting-in-CPP",
+            imagelink: require("../imgs/portfolio-thumbnails/account.jpg").default,
             description:
                 "For a first project, I make a console application for adding and deleting entries of a csv database in C++",
             tags: ["C++"],
