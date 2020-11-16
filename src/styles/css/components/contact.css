@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*  Contact Page  */
 #contact {
   background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.664)), url(../../../imgs/contact.jpg);
@@ -28,11 +29,38 @@
 #contact .main > * {
   height: 80%;
 }
-#contact .main .info {
-  border: 20px solid var(--a-pink);
-  width: 50%;
-}
 #contact .main form {
   background-color: var(--a-pink);
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: space-around;
+  padding: 40px;
+  color: var(--bg);
+}
+#contact .main form .info p span:before {
+  content: "∙";
+}
+#contact .main form > * {
+  display: flex;
+  flex-direction: column;
+}
+#contact .main form > * label {
+  text-transform: capitalize;
+  padding: 5px;
+}
+#contact .main form > * input, #contact .main form > * textarea {
+  border: 2px solid transparent;
+  outline: none;
+  border-radius: 5px;
+}
+#contact .main form > * input:focus, #contact .main form > * textarea:focus {
+  border: 2px solid var(--fg);
+}
+#contact .main form button {
+  margin: 0 30%;
+  border-radius: 5px;
+  outline: none;
+  border: none;
 }

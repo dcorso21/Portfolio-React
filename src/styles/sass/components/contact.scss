@@ -32,14 +32,55 @@
         }
 
         margin: 0% 5%;
-        .info {
-            border: 20px solid gc(a-pink);
-            width: 50%;
-        }
 
         form {
             background-color: gc(a-pink);
             width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: left;
+            justify-content: space-around;
+            padding: 40px;
+            color: gc(bg);
+
+            .info {
+                p {
+                    span {
+                        &:before {
+                            content: "∙"
+                        }
+                    }
+                }
+            }
+
+            & > * {
+                display: flex;
+                flex-direction: column;
+                label {
+                    text-transform: capitalize;
+                    padding: 5px;
+                }
+                input, textarea {
+                    border: 2px solid transparent;
+                    outline: none;
+                    border-radius: 5px;
+                    &:focus {
+                        border: 2px solid gc(fg);
+                    }
+                }
+
+            }
+
+            button {
+                margin: 0 30%;
+                border-radius: 5px;
+                outline: none;
+                border: none;
+
+            
+            }
+
+            
         }
     }
 

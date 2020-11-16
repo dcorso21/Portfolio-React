@@ -1,32 +1,32 @@
 import React, { Component } from "react";
 import "../styles/css/components/portfolio.css";
 
-function makeTags() {
-    let tags = [
-            "Python",
-            "Javascript",
-            "Sass",
-            "HTML",
-            "pug",
-            "Pandas",
-            "React",
-        ],
-        colors = ["purple", "blue", "green", "yellow", "pink"];
+// function makeTags() {
+//     let tags = [
+//             "Python",
+//             "Javascript",
+//             "Sass",
+//             "HTML",
+//             "pug",
+//             "Pandas",
+//             "React",
+//         ],
+//         colors = ["purple", "blue", "green", "yellow", "pink"];
 
-    return tags.map((t, i) => {
-        if (i !== 0) {
-            colors.push(colors.shift());
-        }
-        return (
-            <span
-                className="tag"
-                style={{ backgroundColor: `var(--a-${colors[0]})` }}
-            >
-                {t}
-            </span>
-        );
-    });
-}
+//     return tags.map((t, i) => {
+//         if (i !== 0) {
+//             colors.push(colors.shift());
+//         }
+//         return (
+//             <span
+//                 className="tag"
+//                 style={{ backgroundColor: `var(--a-${colors[0]})` }}
+//             >
+//                 {t}
+//             </span>
+//         );
+//     });
+// }
 
 function openInNewTab(url) {
     console.log("hello");
@@ -92,7 +92,6 @@ function makeProjects() {
             title: "Twitter Clone",
             link: "https://dcorso21.github.io/Twitter-Clone/",
             imagelink: require("../imgs/portfolio-thumbnails/twitter.png").default,
-
             description: "A remake of the Twitter front end design",
             tags: ["Javascript", "CSS", "HTML"],
         },
@@ -106,7 +105,6 @@ function makeProjects() {
         {
             title: "Simple Accounting in C++",
             link: "https://github.com/dcorso21/Accounting-in-CPP",
-
             description:
                 "For a first project, I make a console application for adding and deleting entries of a csv database in C++",
             tags: ["C++"],
@@ -155,15 +153,15 @@ export default class Portfolio extends Component {
                 <div className="row-1">
                     <div className="topbar">
                         <h1>Portfolio</h1>
-                        <div className="searchBar">
+                        {/* <div className="searchBar">
                             <input
                                 type="text"
                                 placeholder="Search for Keywords"
                             />
                             <i className="fas fa-search"></i>
-                        </div>
+                        </div> */}
                     </div>
-                    <div className="tags">{makeTags()}</div>
+                    {/* <div className="tags">{makeTags()}</div> */}
                 </div>
                 <div className="projects">{makeProjects()}</div>
             </section>
