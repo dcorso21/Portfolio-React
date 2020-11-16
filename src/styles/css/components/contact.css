@@ -23,8 +23,6 @@
   justify-content: center;
   align-items: center;
   height: 100%;
-  width: 90%;
-  margin: 0% 5%;
 }
 #contact .main > * {
   height: 80%;
@@ -35,21 +33,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  padding: 40px;
+  justify-content: space-evenly;
+  padding: 10px 40px;
   color: var(--bg);
 }
 #contact .main form .info {
-  padding: 20px 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 #contact .main form .info h2 {
-  font-size: 1.3rem;
-  padding: 20px;
-  padding-top: 0;
+  background-color: var(--bg);
+  font-size: 2rem;
+  color: var(--a-pink);
+  padding: 10px;
+  margin: 10px;
+  margin-bottom: 20px;
+}
+#contact .main form .info p {
+  font-style: italic;
 }
 #contact .main form .info p span {
   padding: 5px;
