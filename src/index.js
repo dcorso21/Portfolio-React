@@ -6,7 +6,7 @@ import Menu from "./components/menu";
 import Landing from "./components/landing";
 import Portfolio from "./components/portfolio";
 import About from "./components/about";
-import Resume from "./components/resume";
+// import Resume from "./components/resume";
 import Contact from "./components/contact";
 
 ReactDOM.render(
@@ -15,7 +15,7 @@ ReactDOM.render(
             <Menu />
             <Landing />
             <About />
-            <Resume />
+            {/* <Resume /> */}
             <Portfolio />
             <Contact />
         </div>
