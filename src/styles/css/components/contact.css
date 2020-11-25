@@ -1,4 +1,20 @@
 @charset "UTF-8";
+:root {
+  --fg: #1b1b1b;
+  --bg: #fff;
+  --a-yellow: rgba(249, 169, 83, 0.644);
+  --a-yellow-trans: rgba(58, 56, 65, 0.591);
+  --a-green: rgba(6, 214, 158, 0.651);
+  --a-blue: rgba(17, 138, 178, 0.651);
+  --a-purple: rgba(127, 106, 147, 0.651);
+  --a-pink: rgba(239, 71, 110, 0.658);
+}
+
+.dark {
+  --bg: #fff;
+  --fg: #363636;
+}
+
 /*  Contact Page  */
 #contact {
   background: linear-gradient(to top, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.664)), url(../../../imgs/contact.jpg);

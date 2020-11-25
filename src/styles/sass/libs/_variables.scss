@@ -24,15 +24,15 @@ $dark_color_palette: (
     fg: rgb(54, 54, 54),
 );
 
-// :root {
-//     @each $name, $color in $color_palette {
-//         --#{$name}: #{$color};
-//     }
-// }
+:root {
+    @each $name, $color in $color_palette {
+        --#{$name}: #{$color};
+    }
+}
 
 
-// .dark {
-//     @each $name, $color in $dark_color_palette {
-//         --#{$name}: #{$color};
-//     }
-// }
+.dark {
+    @each $name, $color in $dark_color_palette {
+        --#{$name}: #{$color};
+    }
+}

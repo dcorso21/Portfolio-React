@@ -30,7 +30,7 @@ function makeProjects() {
             link: "https://dcorso21.github.io/Versatile-Pathfinder/index.html",
             imagelink: require("../imgs/portfolio-thumbnails/pathfinder.png").default,
             description: "Interactive Path Finder",
-            tags: ["Javascript", "CSS", "HTML"],
+            tags: ["Javascript", "SCSS", "HTML"],
         },
         {
             title: "React Movie Viewer",
@@ -52,21 +52,21 @@ function makeProjects() {
             link: "https://dcorson-gmail-clone.netlify.app",
             imagelink: require("../imgs/portfolio-thumbnails/gmail.png").default,
             description: "A remake of the Gmail front end design",
-            tags: ["Javascript", "CSS", "HTML"],
+            tags: ["Pug/Jade", "Sass/SCSS"],
         },
         {
             title: "YouTube Clone",
             link: "https://dcorso21.github.io/youtube-clone/",
             imagelink: require("../imgs/portfolio-thumbnails/youtube.png").default,
             description: "A remake of the YouTube front end design",
-            tags: ["Javascript", "CSS", "HTML"],
+            tags: ["Pug/Jade", "Sass/SCSS"],
         },
         {
             title: "Twitter Clone",
             link: "https://dcorso21.github.io/Twitter-Clone/",
             imagelink: require("../imgs/portfolio-thumbnails/twitter.png").default,
             description: "A remake of the Twitter front end design",
-            tags: ["Javascript", "CSS", "HTML"],
+            tags: ["Pug/Jade", "Sass/SCSS"],
         },
         {
             title: "MySQL Dual Database Library Management",

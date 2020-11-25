@@ -10,7 +10,7 @@ export default class Menu extends Component {
     }
 
     listSections() {
-        let sections = ["home", "about", "resume", "portfolio", "contact"];
+        let sections = ["home", "about", "portfolio", "contact"];
         return sections.map((s) => {
             return (
                 <li
