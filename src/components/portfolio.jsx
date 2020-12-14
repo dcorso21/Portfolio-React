@@ -19,7 +19,7 @@ function makeProjects() {
         },
         {
             title: "Sorting Visualizer",
-            link: "https://dcorson-sorting-visualizer.netlify.app/",
+            link: "https://dcorso21.github.io/SortingVisualizer/",
             imagelink: require("../imgs/portfolio-thumbnails/sorting-vis.jpg").default,
             description:
                 "An app for showing the process of different sorting algorithms",
@@ -49,7 +49,7 @@ function makeProjects() {
         },
         {
             title: "Gmail Clone",
-            link: "https://dcorson-gmail-clone.netlify.app",
+            link: "https://dcorso21.github.io/Gmail-Clone/",
             imagelink: require("../imgs/portfolio-thumbnails/gmail.png").default,
             description: "A remake of the Gmail front end design",
             tags: ["Pug/Jade", "Sass/SCSS"],
@@ -88,7 +88,6 @@ function makeProjects() {
 
     return projects.map((p, i) => {
         // console.log({ background: `url(${p.imagelink})` });
-        console.log(typeof p.imagelink);
         let style = !!p.imagelink
             ? {
                 //   background: `url(${require("../imgs/portfolio-thumbnails/algo.png").default}`,

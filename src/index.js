@@ -9,6 +9,14 @@ import About from "./components/about";
 // import Resume from "./components/resume";
 import Contact from "./components/contact";
 
+import FingerprintJS from "@fingerprintjs/fingerprintjs-pro";
+
+FingerprintJS.load({ token: "CozPWXtyBHjKWbrmsEqX" })
+    .then((fp) => fp.get())
+    .then((result) => console.log(result.visitorId));
+
+console.log(FingerprintJS);
+
 ReactDOM.render(
     <React.StrictMode>
         <div className="layout">
