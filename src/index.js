@@ -11,9 +11,9 @@ import Contact from "./components/contact";
 
 import FingerprintJS from "@fingerprintjs/fingerprintjs-pro";
 
-FingerprintJS.load({ token: "CozPWXtyBHjKWbrmsEqX" })
+FingerprintJS.load({ token: "CozPWXtyBHjKWbrmsEqX", endpoint: "fp.dcorson.com" })
     .then((fp) => fp.get())
-    .then((result) => console.log(result.visitorId));
+    .then((result) => console.log(result));
 
 console.log(FingerprintJS);
 
