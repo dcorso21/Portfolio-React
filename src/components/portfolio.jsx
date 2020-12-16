@@ -98,13 +98,14 @@ function makeProjects() {
             : {};
 
         function addTags(tags) {
-            return tags.map((t) => {
-                return <span className="tag">{t}</span>;
+            return tags.map((t, i) => {
+                return <span className="tag" key={i}>{t}</span>;
             });
         }
 
         return (
             <div
+            key={i}
             style={style}
             className="project"
             onClick={() => openInNewTab(p.link)}
@@ -127,15 +128,7 @@ export default class Portfolio extends Component {
                 <div className="row-1">
                     <div className="topbar">
                         <h1>Portfolio</h1>
-                        {/* <div className="searchBar">
-                            <input
-                                type="text"
-                                placeholder="Search for Keywords"
-                            />
-                            <i className="fas fa-search"></i>
-                        </div> */}
                     </div>
-                    {/* <div className="tags">{makeTags()}</div> */}
                 </div>
                 <div className="projects">{makeProjects()}</div>
             </section>

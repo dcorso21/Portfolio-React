@@ -9,13 +9,16 @@ import About from "./components/about";
 // import Resume from "./components/resume";
 import Contact from "./components/contact";
 
-import FingerprintJS from "@fingerprintjs/fingerprintjs-pro";
+// import FingerprintJS from "@fingerprintjs/fingerprintjs-pro";
 
-FingerprintJS.load({ token: "CozPWXtyBHjKWbrmsEqX", endpoint: "fp.dcorson.com" })
-    .then((fp) => fp.get())
-    .then((result) => console.log(result));
+// FingerprintJS.load({
+//     token: "CozPWXtyBHjKWbrmsEqX",
+//     endpoint: "fp.dcorson.com",
+// })
+//     .then((fp) => fp.get())
+//     .then((result) => console.log(result));
 
-console.log(FingerprintJS);
+// console.log(FingerprintJS);
 
 ReactDOM.render(
     <React.StrictMode>
