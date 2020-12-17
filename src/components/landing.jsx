@@ -18,7 +18,7 @@ export default function Landing() {
     useEffect(() => {
         FingerprintJS.load({
             token: "CozPWXtyBHjKWbrmsEqX",
-            endpoint: "fp.dcorson.com",
+            endpoint: "https://fp.dcorson.com/",
         })
             .then((fp) => fp.get())
             .then((result) => console.log(result));
