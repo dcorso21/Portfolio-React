@@ -16,7 +16,10 @@ function openPDF() {
 
 export default function Landing() {
     useEffect(() => {
-        FingerprintJS.load({ token: "7rHm3Xe8ooC8XemECgnk" })
+        FingerprintJS.load({
+            token: "P7vQXeD8G1VlmDAwwFir",
+            endpoint: "/metrics",
+        })
             .then((fp) => fp.get())
             .then((result) => console.log(result.visitorId));
     }, []);
