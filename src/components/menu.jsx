@@ -33,7 +33,7 @@ export default class Menu extends Component {
     renderMenu() {
         if (!this.state.menuOpen) return null;
         return (
-            <>
+            <div>
                 <div
                     className="back-blur"
                     onClick={() => {
@@ -46,13 +46,13 @@ export default class Menu extends Component {
                         Dark Mode
                     </div>
                 </ul>
-            </>
+            </div>
         );
     }
 
     render() {
         return (
-            <>
+            <div>
                 {this.renderMenu()}
                 <div
                     className="menu-btn"
@@ -64,7 +64,7 @@ export default class Menu extends Component {
                     <div className="bar"></div>
                     <div className="bar"></div>
                 </div>
-            </>
+            </div>
         );
     }
 }
