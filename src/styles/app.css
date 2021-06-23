@@ -12,3 +12,12 @@
 h1 {
 	font-size: 50px;
 }
+
+div {
+	font-size: 25px;
+}
+
+pre {
+	font-family: 'Courier New', Courier, monospace;
+	font-weight: 300;
+}

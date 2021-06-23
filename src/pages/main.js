@@ -17,7 +17,7 @@ export default function Main() {
 
     return (
         <div className="layout">
-            <h1>My Site</h1>
+            <h1>Dcorson.com</h1>
 
             <div>Hello, my name is David and this is my website.</div>
             {!visitorInfo ? null : (
