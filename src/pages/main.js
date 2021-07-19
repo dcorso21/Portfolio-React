@@ -7,8 +7,10 @@ export default function Main() {
     useEffect(identifyVisitor, []);
 
     function identifyVisitor() {
-        FingerprintJS.load({ token: "3STdb5rPK7oQx6Cd2ViT" })
-            .then((fp) => fp.get())
+        FingerprintJS.load({ token: "3STdb5rPK7oQx6Cd2ViT", endpoint: 'https://fp.dcorson.com' })
+            .then((fp) => fp.get({
+                extendedResult: true
+            }))
             .then((result) => {
                 console.log(result);
                 setVisitorInfo(result);
