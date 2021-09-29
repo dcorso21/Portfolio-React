@@ -1,28 +1,20 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import FingerprintJS from "@fingerprintjs/fingerprintjs-pro";
 
 export default function Main() {
-    const [visitorInfo, setVisitorInfo] = useState();
 
     useEffect(identifyVisitor, []);
 
     function identifyVisitor() {
-        FingerprintJS.load({ token: 'NOmBTwzxJRv8aJHdlhVZ', endpoint: 'https://fp.dcorson.com' })
+        FingerprintJS.load({ token: 'NOmBTwzxJRv8aJHdlhVZ' })
             .then((fp) => fp.get())
-            .then((result) => {
-                console.log(result);
-                setVisitorInfo(result);
-            });
+            .then((result) => console.log(result));
     }
 
     return (
         <div className="layout">
-            <h1>dcorson.com</h1>
-
-            <div>Hello, my name is David and this is my website.</div>
-            {!visitorInfo ? null : (
-                <pre>{JSON.stringify(visitorInfo, null, 4)}</pre>
-            )}
+            <h1>Production Website FPJS Example</h1>
+            <div>An example site for using FPJS with a subdomain</div>
         </div>
     );
 }
