@@ -6,9 +6,12 @@ export default function Main() {
     useEffect(identifyVisitor, []);
 
     function identifyVisitor() {
-        FingerprintJS.load({ token: 'NOmBTwzxJRv8aJHdlhVZ' })
+
+
+        FingerprintJS.load({ token: 'NOmBTwzxJRv8aJHdlhVZ', endpoint: 'https://metrics.dcorson.com' })
             .then((fp) => fp.get())
             .then((result) => console.log(result));
+
     }
 
     return (
