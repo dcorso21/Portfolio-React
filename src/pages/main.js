@@ -8,7 +8,7 @@ export default function Main() {
     function identifyVisitor() {
 
 
-        FingerprintJS.load({ token: 'NOmBTwzxJRv8aJHdlhVZ', endpoint: 'https://metrics.dcorson.com' })
+        FingerprintJS.load({ token: 'NOmBTwzxJRv8aJHdlhVZ' })
             .then((fp) => fp.get())
             .then((result) => console.log(result));
 
